@@ -5,8 +5,8 @@ metadata:
   namespace: ais-service-demo
 spec:
   schedule: "*/5 * * * *"
-  successfulJobsHistoryLimit: 3
-  failedJobsHistoryLimit: 5
+  successfulJobsHistoryLimit: 5
+  failedJobsHistoryLimit: 7
   jobTemplate:
     spec:
       template:
