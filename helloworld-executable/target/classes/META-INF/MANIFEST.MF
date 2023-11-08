@@ -1,4 +1,6 @@
 Manifest-Version: 1.0
-Build-Jdk-Spec: 17
+Built-By: dan44862
+Build-Jdk: 17.0.7
+Main-Class: gov.vita.ais.examples.helloworld.Main
 Created-By: Maven Integration for Eclipse
 
