@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ais-cronjob-demo
+  namespace: ais-service-demo
+spec:
+  schedule: "*/5 * * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 5
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - env:
+            - name: TZ
+              value: America/New_York          
+            name: helloworld
+            image: reportingservice:1.0.0
+            imagePullPolicy: IfNotPresent
+          restartPolicy: Never
