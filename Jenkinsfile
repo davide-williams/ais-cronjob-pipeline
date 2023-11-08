@@ -6,7 +6,7 @@ pipeline {
       NAMESPACE = 'ais-service-demo'
       APP_NAME = 'ais-cronjob-demo'      
       EMAIL_RECIPENT ='DavidE.Williams@vita.virginia.gov'
-      APP_BUILD_PATH = "${WORKSPACE}/helloworld-executable-jar"
+      APP_BUILD_PATH = "${WORKSPACE}/helloworld-executable"
       APP_IMAGE = "image-registry.openshift-image-registry.svc:5000/${NAMESPACE}/${APP_NAME}"
    }
   stages {
