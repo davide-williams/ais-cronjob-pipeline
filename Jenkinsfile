@@ -34,7 +34,7 @@ pipeline {
       steps {
         dir("${APP_BUILD_PATH}"){ 
           echo 'Building image'    
-          sh "podman build --pull=newer -f Dockerfile --tag ${APP_IMAGE}:"+env.BUILD_NUMBER
+          sh "podman build --no-cache -f Dockerfile --tag ${APP_IMAGE}:"+env.BUILD_NUMBER
         }
       }
     }
